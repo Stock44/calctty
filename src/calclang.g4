@@ -12,7 +12,6 @@ expr: '(' expr ')' # Parentheses
     | expr '^' expr # BinaryOp
     | expr ( '*' | '/' ) expr # BinaryOp
     | expr ( '+' | '-' ) expr # BinaryOp
-    | expr expr # BinaryOp
     | expr ( '=='
            | '!='
            | '<'
@@ -25,6 +24,7 @@ expr: '(' expr ')' # Parentheses
            | '||'
            | 'or'
            ) expr # BinaryOp
+    | expr expr # BinaryOp
     | Identifier '=' expr # Assigment
     | (Identifier | Number | Boolean) # Value;
 
