@@ -12,7 +12,8 @@
 		"lint": "prettier --plugin-search-dir . --check . && eslint .",
 		"format": "prettier --plugin-search-dir . --write .",
 		"test:integration": "playwright test",
-		"test:unit": "vitest"
+		"test:unit": "vitest",
+		"antlr4ts": "antlr4ts -visitor src/lib/CalcLang.g4"
 	},
 	"devDependencies": {
 		"@playwright/test": "^1.28.1",
@@ -20,6 +21,7 @@
 		"@sveltejs/kit": "^1.20.4",
 		"@typescript-eslint/eslint-plugin": "^5.45.0",
 		"@typescript-eslint/parser": "^5.45.0",
+		"antlr4ts-cli": "^0.5.0-alpha.4",
 		"autoprefixer": "^10.4.15",
 		"eslint": "^8.28.0",
 		"eslint-config-prettier": "^8.5.0",
@@ -37,6 +39,8 @@
 	},
 	"type": "module",
 	"dependencies": {
-		"antlr4": "^4.13.0"
+		"antlr4ts": "^0.5.0-alpha.4",
+		"assert": "^2.0.0",
+		"util": "^0.12.5"
 	}
 }
