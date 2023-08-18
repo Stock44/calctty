@@ -1,24 +1,17 @@
-// Generated from src/lib/CalcLang.g4 by ANTLR 4.9.0-SNAPSHOT
+// Generated from src/lib/CalcLang/CalcLang.g4 by ANTLR 4.9.0-SNAPSHOT
 
+import type { ParseTreeVisitor } from 'antlr4ts/tree/ParseTreeVisitor';
 
-import { ParseTreeVisitor } from "antlr4ts/tree/ParseTreeVisitor";
-
-import { ValueContext } from "./CalcLangParser";
-import { UnaryOpContext } from "./CalcLangParser";
-import { BinaryOpContext } from "./CalcLangParser";
-import { ImplicitMulContext } from "./CalcLangParser";
-import { FuncAssignmentContext } from "./CalcLangParser";
-import { AssigmentContext } from "./CalcLangParser";
-import { FileContext } from "./CalcLangParser";
-import { ExprContext } from "./CalcLangParser";
-import { ParenthesesContext } from "./CalcLangParser";
-import { FuncCallContext } from "./CalcLangParser";
-import { ExprListContext } from "./CalcLangParser";
-import { IdentifierListContext } from "./CalcLangParser";
-import { IdentifierContext } from "./CalcLangParser";
-import { NumberContext } from "./CalcLangParser";
-import { BooleanContext } from "./CalcLangParser";
-
+import type { ValueContext, ExprContext, FuncCallContext } from '$lib/CalcLang/CalcLangParser';
+import type { UnaryOpContext } from '$lib/CalcLang/CalcLangParser';
+import type { BinaryOpContext } from '$lib/CalcLang/CalcLangParser';
+import type { ImplicitMulContext } from '$lib/CalcLang/CalcLangParser';
+import type { FuncAssignmentContext } from '$lib/CalcLang/CalcLangParser';
+import type { AssigmentContext } from '$lib/CalcLang/CalcLangParser';
+import type { FileContext } from '$lib/CalcLang/CalcLangParser';
+import type { ParenthesesContext } from '$lib/CalcLang/CalcLangParser';
+import type { ExprListContext } from '$lib/CalcLang/CalcLangParser';
+import type { IdentifierListContext } from '$lib/CalcLang/CalcLangParser';
 
 /**
  * This interface defines a complete generic visitor for a parse tree produced
@@ -117,26 +110,4 @@ export interface CalcLangVisitor<Result> extends ParseTreeVisitor<Result> {
 	 * @return the visitor result
 	 */
 	visitIdentifierList?: (ctx: IdentifierListContext) => Result;
-
-	/**
-	 * Visit a parse tree produced by `CalcLangParser.identifier`.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	visitIdentifier?: (ctx: IdentifierContext) => Result;
-
-	/**
-	 * Visit a parse tree produced by `CalcLangParser.number`.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	visitNumber?: (ctx: NumberContext) => Result;
-
-	/**
-	 * Visit a parse tree produced by `CalcLangParser.boolean`.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	visitBoolean?: (ctx: BooleanContext) => Result;
 }
-

@@ -24,23 +24,17 @@ expr: parentheses # Value
            | '||'
            | 'or'
            ) expr # BinaryOp
-    | number (funcCall | parentheses | identifier) # ImplicitMul
-    | identifier '(' identifierList? ')' '=' expr # FuncAssignment
-    | identifier '=' expr # Assigment
-    | identifier # Value
-    | number # Value
-    | boolean # Value
-    ;
+    | Number (funcCall | parentheses | Identifier) # ImplicitMul
+    | Identifier '(' identifierList? ')' '=' expr # FuncAssignment
+    | Identifier '=' expr # Assigment
+    | (Identifier | Number | Boolean) # Value;
 
 parentheses: '(' expr ')';
-funcCall: identifier '(' exprList? ')';
+funcCall: Identifier '(' exprList? ')';
 exprList: expr (',' expr)*;
 
-identifierList: identifier (',' identifier)*;
+identifierList: Identifier (',' Identifier)*;
 
-identifier: Identifier;
-number: Number;
-boolean: Boolean;
 
 BlockComment: '/*' .*? '*/' -> skip;
 LineComment: '//' ~[\r\n]* Newline -> skip;

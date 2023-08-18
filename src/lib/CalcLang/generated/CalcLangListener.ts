@@ -1,23 +1,21 @@
-// Generated from src/lib/CalcLang.g4 by ANTLR 4.9.0-SNAPSHOT
+// Generated from src/lib/CalcLang/CalcLang.g4 by ANTLR 4.9.0-SNAPSHOT
 
 
-import { ParseTreeListener } from "antlr4ts/tree/ParseTreeListener";
+// Generated from src/lib/CalcLang/CalcLang.g4 by ANTLR 4.9.0-SNAPSHOT
+import type { ParseTreeListener } from 'antlr4ts/tree/ParseTreeListener';
 
-import { ValueContext } from "./CalcLangParser";
-import { UnaryOpContext } from "./CalcLangParser";
-import { BinaryOpContext } from "./CalcLangParser";
-import { ImplicitMulContext } from "./CalcLangParser";
-import { FuncAssignmentContext } from "./CalcLangParser";
-import { AssigmentContext } from "./CalcLangParser";
-import { FileContext } from "./CalcLangParser";
-import { ExprContext } from "./CalcLangParser";
-import { ParenthesesContext } from "./CalcLangParser";
-import { FuncCallContext } from "./CalcLangParser";
-import { ExprListContext } from "./CalcLangParser";
-import { IdentifierListContext } from "./CalcLangParser";
-import { IdentifierContext } from "./CalcLangParser";
-import { NumberContext } from "./CalcLangParser";
-import { BooleanContext } from "./CalcLangParser";
+import type { ValueContext } from "./CalcLangParser";
+import type { UnaryOpContext } from "./CalcLangParser";
+import type { BinaryOpContext } from "./CalcLangParser";
+import type { ImplicitMulContext } from "./CalcLangParser";
+import type { FuncAssignmentContext } from "./CalcLangParser";
+import type { AssigmentContext } from "./CalcLangParser";
+import type { FileContext } from "./CalcLangParser";
+import type { ExprContext } from "./CalcLangParser";
+import type { ParenthesesContext } from "./CalcLangParser";
+import type { FuncCallContext } from "./CalcLangParser";
+import type { ExprListContext } from "./CalcLangParser";
+import type { IdentifierListContext } from "./CalcLangParser";
 
 
 /**
@@ -168,38 +166,5 @@ export interface CalcLangListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	exitIdentifierList?: (ctx: IdentifierListContext) => void;
-
-	/**
-	 * Enter a parse tree produced by `CalcLangParser.identifier`.
-	 * @param ctx the parse tree
-	 */
-	enterIdentifier?: (ctx: IdentifierContext) => void;
-	/**
-	 * Exit a parse tree produced by `CalcLangParser.identifier`.
-	 * @param ctx the parse tree
-	 */
-	exitIdentifier?: (ctx: IdentifierContext) => void;
-
-	/**
-	 * Enter a parse tree produced by `CalcLangParser.number`.
-	 * @param ctx the parse tree
-	 */
-	enterNumber?: (ctx: NumberContext) => void;
-	/**
-	 * Exit a parse tree produced by `CalcLangParser.number`.
-	 * @param ctx the parse tree
-	 */
-	exitNumber?: (ctx: NumberContext) => void;
-
-	/**
-	 * Enter a parse tree produced by `CalcLangParser.boolean`.
-	 * @param ctx the parse tree
-	 */
-	enterBoolean?: (ctx: BooleanContext) => void;
-	/**
-	 * Exit a parse tree produced by `CalcLangParser.boolean`.
-	 * @param ctx the parse tree
-	 */
-	exitBoolean?: (ctx: BooleanContext) => void;
 }
 
