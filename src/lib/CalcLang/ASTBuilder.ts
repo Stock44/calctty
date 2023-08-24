@@ -14,7 +14,7 @@ import {
 	UnaryOpContext,
 	ValueContext
 } from '$lib/CalcLang/generated/CalcLangParser';
-import type { ASTNode, File, ParseError } from '$lib/CalcLang/ASTNode';
+import type { ASTNode, FileNode, ParseError } from '$lib/CalcLang/ASTNode';
 
 import type { ExprNode } from '$lib/CalcLang/ExprNode';
 import { FunCallExpr } from '$lib/CalcLang/FunCallExpr';
@@ -34,7 +34,7 @@ export default class ASTBuilder implements CalcLangVisitor<ASTNode> {
 				startPos: node.start.charPositionInLine,
 				endLine: node.stop?.line,
 				endPos: node.stop?.charPositionInLine,
-				what: `failed parsing expression`
+				what: `failed parsing expression: ${node.exception.message}`
 			};
 		}
 
@@ -76,7 +76,7 @@ export default class ASTBuilder implements CalcLangVisitor<ASTNode> {
 		}
 	}
 
-	visitFile(ctx: FileContext): File {
+	visitFile(ctx: FileContext): FileNode {
 		if (!ctx.children) {
 			return {
 				lines: [],

@@ -1,17 +1,22 @@
 // Generated from src/lib/CalcLang/CalcLang.g4 by ANTLR 4.9.0-SNAPSHOT
 
+
+// Generated from src/lib/CalcLang/CalcLang.g4 by ANTLR 4.9.0-SNAPSHOT
 import type { ParseTreeVisitor } from 'antlr4ts/tree/ParseTreeVisitor';
 
-import type { ValueContext, ExprContext, FuncCallContext } from '$lib/CalcLang/CalcLangParser';
-import type { UnaryOpContext } from '$lib/CalcLang/CalcLangParser';
-import type { BinaryOpContext } from '$lib/CalcLang/CalcLangParser';
-import type { ImplicitMulContext } from '$lib/CalcLang/CalcLangParser';
-import type { FuncAssignmentContext } from '$lib/CalcLang/CalcLangParser';
-import type { AssigmentContext } from '$lib/CalcLang/CalcLangParser';
-import type { FileContext } from '$lib/CalcLang/CalcLangParser';
-import type { ParenthesesContext } from '$lib/CalcLang/CalcLangParser';
-import type { ExprListContext } from '$lib/CalcLang/CalcLangParser';
-import type { IdentifierListContext } from '$lib/CalcLang/CalcLangParser';
+import type { ValueContext } from './CalcLangParser';
+import type { UnaryOpContext } from './CalcLangParser';
+import type { BinaryOpContext } from "./CalcLangParser";
+import type { ImplicitMulContext } from "./CalcLangParser";
+import type { FuncAssignmentContext } from "./CalcLangParser";
+import type { AssigmentContext } from "./CalcLangParser";
+import type { FileContext } from "./CalcLangParser";
+import type { ExprContext } from "./CalcLangParser";
+import type { ParenthesesContext } from "./CalcLangParser";
+import type { FuncCallContext } from "./CalcLangParser";
+import type { ExprListContext } from "./CalcLangParser";
+import type { IdentifierListContext } from "./CalcLangParser";
+
 
 /**
  * This interface defines a complete generic visitor for a parse tree produced
@@ -111,3 +116,4 @@ export interface CalcLangVisitor<Result> extends ParseTreeVisitor<Result> {
 	 */
 	visitIdentifierList?: (ctx: IdentifierListContext) => Result;
 }
+

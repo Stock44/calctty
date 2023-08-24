@@ -7,7 +7,7 @@ export interface ASTNode {
 	endPos?: number;
 }
 
-export interface File extends ASTNode {
+export interface FileNode extends ASTNode {
 	lines: ExprNode[];
 }
 

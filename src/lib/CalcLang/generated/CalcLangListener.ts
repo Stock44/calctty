@@ -4,18 +4,18 @@
 // Generated from src/lib/CalcLang/CalcLang.g4 by ANTLR 4.9.0-SNAPSHOT
 import type { ParseTreeListener } from 'antlr4ts/tree/ParseTreeListener';
 
-import type { ValueContext } from "./CalcLangParser";
-import type { UnaryOpContext } from "./CalcLangParser";
-import type { BinaryOpContext } from "./CalcLangParser";
-import type { ImplicitMulContext } from "./CalcLangParser";
-import type { FuncAssignmentContext } from "./CalcLangParser";
-import type { AssigmentContext } from "./CalcLangParser";
-import type { FileContext } from "./CalcLangParser";
-import type { ExprContext } from "./CalcLangParser";
-import type { ParenthesesContext } from "./CalcLangParser";
-import type { FuncCallContext } from "./CalcLangParser";
-import type { ExprListContext } from "./CalcLangParser";
-import type { IdentifierListContext } from "./CalcLangParser";
+import type { ValueContext } from './CalcLangParser';
+import type { UnaryOpContext } from './CalcLangParser';
+import type { BinaryOpContext } from './CalcLangParser';
+import type { ImplicitMulContext } from './CalcLangParser';
+import type { FuncAssignmentContext } from './CalcLangParser';
+import type { AssigmentContext } from './CalcLangParser';
+import type { FileContext } from './CalcLangParser';
+import type { ExprContext } from './CalcLangParser';
+import type { ParenthesesContext } from './CalcLangParser';
+import type { FuncCallContext } from './CalcLangParser';
+import type { ExprListContext } from './CalcLangParser';
+import type { IdentifierListContext } from './CalcLangParser';
 
 
 /**
