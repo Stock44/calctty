@@ -29,9 +29,36 @@
             env = interpreter.env;
         }
     }
+
+    let title = 'untitled calc';
 </script>
 
-<div class="flex w-screen h-screen">
-    <div contenteditable class="flex-1" bind:innerText={fileContents} on:input={handleInput} />
-    <div class="flex-1 whitespace-pre-line">{values}</div>
+<div class="grid grid-cols-[3rem_1fr] grid-rows-[3rem_1fr] w-screen h-screen bg-slate-800 text-slate-50 font-mono">
+    <header class="col-span-2 flex items-center gap-6 px-5 border-b-1 border-slate-700">
+        <p class="font-bold">
+            @calctty
+        </p>
+        <h1 contenteditable
+            class="h-fit p-1 focus:bg-slate-800 border-1 border-transparent focus:border-slate-700 outline-0 rounded">
+            untitled calc
+        </h1>
+    </header>
+    <div class="col-span-1 flex flex-col py-2 gap-4 border-r-1 border-slate-700 text-slate-500 text-center">
+        <span class="material-symbols-outlined">
+            menu
+        </span>
+        <span class="material-symbols-outlined">
+            home_storage
+        </span>
+        <span class="material-symbols-outlined">
+            quick_reference
+        </span>
+        <span class="material-symbols-outlined">
+            info
+        </span>
+    </div>
+    <div class="flex col-span-1 bg-slate-900 border-slate-700">
+        <div contenteditable autofocus class="flex-1" bind:innerText={fileContents} on:input={handleInput} />
+        <div class="flex-1 whitespace-pre-line">{values}</div>
+    </div>
 </div>

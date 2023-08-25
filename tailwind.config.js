@@ -2,7 +2,14 @@
 export default {
 	content: ['./src/**/*.{html,js,svelte,ts}'],
 	theme: {
-		extend: {}
+		fontFamily: {
+			mono: 'IBM Plex Mono'
+		},
+		extend: {
+			borderWidth: {
+				'1': '1px'
+			}
+		}
 	},
 	plugins: [require('@tailwindcss/typography')]
 };
